@@ -20,7 +20,13 @@ module BetterValidations::Errors
     #   }
     # }
     def detailed_messages(wrap_attributes_to: nil)
-      return @messages if @messages.blank?
+      if @messages.blank?
+        @messages = @errors.each_with_object({}) do |error, messages|
+          messages[error.attribute] ||= []
+          messages[error.attribute] << error.message
+        end
+        return @messages if @messages.blank?
+      end
 
       # Split errors to field errors and nested objects errors.
       # A dot symbol means that the error is happened with a nested object.
