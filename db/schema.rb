@@ -10,24 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_13_031247) do
-
+ActiveRecord::Schema[7.2].define(version: 2025_01_09_145757) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "belongs_to_objects", force: :cascade do |t|
     t.string "attribute_three"
     t.string "attribute_four"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "has_many_objects", force: :cascade do |t|
     t.integer "test_object_id"
     t.string "attribute_five"
     t.string "attribute_six"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["test_object_id"], name: "index_has_many_objects_on_test_object_id"
   end
 
@@ -35,9 +34,8 @@ ActiveRecord::Schema.define(version: 2020_04_13_031247) do
     t.string "attribute_one"
     t.string "attribute_two"
     t.integer "belongs_to_object_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["belongs_to_object_id"], name: "index_test_objects_on_belongs_to_object_id"
   end
-
 end

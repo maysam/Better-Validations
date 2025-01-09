@@ -1,15 +1,40 @@
 {
   "name": "better_validations",
   "private": true,
+  "packageManager": "yarn@1.22.21",
   "dependencies": {
+    "@babel/core": "7",
+    "@babel/plugin-transform-runtime": "7",
+    "@babel/preset-env": "7",
+    "@babel/runtime": "7",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "4.2.2",
-    "turbolinks": "^5.2.0"
+    "@types/babel__core": "7",
+    "@types/webpack": "5",
+    "babel-loader": "8",
+    "compression-webpack-plugin": "9",
+    "shakapacker": "8.0.2",
+    "terser-webpack-plugin": "5",
+    "turbolinks": "^5.2.0",
+    "webpack": "5",
+    "webpack-assets-manifest": "5",
+    "webpack-cli": "4",
+    "webpack-merge": "5"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.10.3"
-  }
+    "webpack-dev-server": "4"
+  },
+  "babel": {
+    "presets": [
+      "./node_modules/shakapacker/package/babel/preset.js",
+      "./node_modules/shakapacker/package/babel/preset.js",
+      "./node_modules/shakapacker/package/babel/preset.js",
+      "./node_modules/shakapacker/package/babel/preset.js"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
