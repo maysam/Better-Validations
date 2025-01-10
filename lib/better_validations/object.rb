@@ -4,7 +4,7 @@ module BetterValidations::Object
 
     # A helper method to get messages without a reference to 'errors'
     def detailed_errors_messages(wrap_attributes_to)
-      errors.detailed_messages(wrap_attributes_to: wrap_attributes_to)
+      errors.detailed_messages(wrap_attributes_to:)
     end
 
     # Define a 'client_id' attribute for ActiveRecord::Base that can

@@ -29,7 +29,7 @@ class BetterValidations::ValidatorsList
   def detailed_messages(wrap_attributes_to: nil)
     (@invalid_validators || []).reduce({}) do |all_messages, validator|
       messages = validator.errors.detailed_messages(
-        wrap_attributes_to: wrap_attributes_to
+        wrap_attributes_to:
       )
 
       deep_merge(all_messages, messages)

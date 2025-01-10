@@ -33,7 +33,7 @@ class BetterValidations::NestedValidator < ActiveModel::EachValidator
       errors.each do |error|
         record.errors.add("#{attr_name}.#{field_name}",
                           error[:error],
-                          error.except(:error))
+                          **error.except(:error))
       end
     end
   end
