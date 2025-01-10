@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     better_validations (2.0.0)
-      rails (>= 5.0, <= 7.2.2.1)
+      rails (> 6.1, <= 7.2.2.1)
 
 GEM
   remote: https://rubygems.org/
